@@ -1,2 +1,2 @@
 
-print("Pedr")
+print("Ped")
