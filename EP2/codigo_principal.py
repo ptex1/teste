@@ -28,5 +28,11 @@ input("Aperte ENTER para continuar...")
 #inicio do jogo
 
 base_transformada = transforma_base(quest)
+premio = 0
+num_pergunta = 1
+lista_questoes_sorteadas = []
+while premio < 1000000:
+    sorteia_questao_inedida(base_transformada,"FACIL",lista_questoes_sorteadas)
+
 
 
