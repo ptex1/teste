@@ -108,7 +108,6 @@ def gera_ajuda(dic_questao):
         del(opcoes_erradas[2])
     elif opcao_certa == 'D':
         del(opcoes_erradas[3])
-    print(opcoes_erradas)
     letra_sorteada1 = opcoes_erradas[dica1]
     letra_sorteada2 = opcoes_erradas[dica2]
 
