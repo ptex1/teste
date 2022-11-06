@@ -85,3 +85,21 @@ def questao_para_texto(dic_questao,num_questao):
         alternativas += f"{alternativa}: "
         alternativas += f"{resposta}\n"
     return string + alternativas
+
+#ultima função está com erro
+
+import random
+
+def gera_ajuda(dic_questao):
+    dicas = ""
+    num_dicas = random.randint(1,2)
+    opcao_certa = dic_questao["correta"]
+    chaves = list(dic_questao["opcoes"].keys())
+    for i in range(num_dicas):
+        letra_sorteada = random.choice(chaves)
+        while letra_sorteada in opcao_certa:
+            letra_sorteada = random.choice(chaves)
+        opcao_certa += letra_sorteada
+        dica = dic_questao["opcoes"][letra_sorteada]
+        dicas += f"DICA:\n Opcões certamente erradas: {dica} "
+    return dicas
