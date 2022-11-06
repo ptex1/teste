@@ -88,18 +88,36 @@ def questao_para_texto(dic_questao,num_questao):
 
 #ultima função está com erro
 
-import random
-
+from random import randint
 def gera_ajuda(dic_questao):
-    dicas = ""
-    num_dicas = random.randint(1,2)
+    num_dicas = randint(1,2)
+    dica1 = randint(0,2)
+    dica2 = randint(0,2)
+    while dica2 == dica1:
+        dica2 = randint(0,2)
+    
     opcao_certa = dic_questao["correta"]
     chaves = list(dic_questao["opcoes"].keys())
-    for i in range(num_dicas):
-        letra_sorteada = random.choice(chaves)
-        while letra_sorteada in opcao_certa:
-            letra_sorteada = random.choice(chaves)
-        opcao_certa += letra_sorteada
-        dica = dic_questao["opcoes"][letra_sorteada]
-        dicas += f"DICA:\n Opcões certamente erradas: {dica} "
+    opcoes_erradas = chaves
+
+    if opcao_certa == 'A':
+        del(opcoes_erradas[0])
+    elif opcao_certa == 'B':
+        del(opcoes_erradas[1])
+    elif opcao_certa == 'C':
+        del(opcoes_erradas[2])
+    elif opcao_certa == 'D':
+        del(opcoes_erradas[3])
+    print(opcoes_erradas)
+    letra_sorteada1 = opcoes_erradas[dica1]
+    letra_sorteada2 = opcoes_erradas[dica2]
+
+    if num_dicas == 1:
+        dica = dic_questao["opcoes"][letra_sorteada1]
+        dicas = f"DICA:\n Opcões certamente erradas: {dica}"
+    
+    if num_dicas == 2:
+        dica1 = dic_questao["opcoes"][letra_sorteada1]
+        dica2 = dic_questao["opcoes"][letra_sorteada2]
+        dicas = f"DICA:\n Opcões certamente erradas: {dica1} | {dica2}"
     return dicas
