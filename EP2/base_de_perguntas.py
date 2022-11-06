@@ -156,5 +156,70 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          {'titulo': 'O que é Necrose?',
           'nivel': 'dificil',
           'opcoes': {'A': 'Uma banda de Rock', 'B': 'Uma marca de luxo', 'C': 'Cidade Francesa', 'D': 'Morte de tecido orgânico'},
-          'correta': "D" }
-        ]
+          'correta': "D" },
+
+         {'titulo': 'De quem é a famosa frase “Penso, logo existo”?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Platão', 'B': 'Galileu Galilei', 'C': 'Descartes', 'D': 'Sócrates'},
+          'correta': "C" },
+          
+         {'titulo': 'De onde é a invenção do chuveiro elétrico?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'França', 'B': 'Inglaterra', 'C': 'Brasil', 'D': 'Australia'},
+          'correta': "C" },
+          
+         {'titulo': 'Qual é o menor país do mundo?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Vaticano', 'B': 'Nauru', 'C': 'Mônaco', 'D': 'Malta'},
+          'correta': "A" },
+          
+         {'titulo': 'Qual o nome do presidente do Brasil que ficou conhecido como Jango?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Jânio Quadros', 'B': 'Getúlio Vargas', 'C': 'João Goulart', 'D': 'João Figueiredo'},
+          'correta': "C" },
+          
+         {'titulo': 'O que a palavra legend significa em português?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Legenda', 'B': 'Lenda', 'C': 'Legendário', 'D': 'Conto'},
+          'correta': "B" },
+          
+         {'titulo': 'Quanto tempo a luz do Sol demora para chegar à Terra?',
+          'nivel': 'dificil',
+          'opcoes': {'A': '1 dia', 'B': '12 horas', 'C': '8 minutos', 'D': '12 segundos'},
+          'correta': "C" },
+          
+         {'titulo': 'Em que período da pré-história o fogo foi descoberto?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Neolítico', 'B': 'Paleolítico', 'C': 'Idade dos Metais', 'D': 'Período da Pedra Polida'},
+          'correta': "B" },
+          
+         {'titulo': 'Qual a montanha mais alta do Brasil?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Monte Roraima', 'B': 'Pico Paraná', 'C': 'Pico da Neblina', 'D': 'Pico da Bandeira'},
+          'correta': "C" },
+          
+         {'titulo': 'Em qual local da Asia o português é língua oficial?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Moçambique', 'B': 'Filipinas', 'C': 'Portugal', 'D': 'Macau'},
+          'correta': "D" },
+          
+         {'titulo': 'Quem é o autor de “O Príncipe”?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Maquiavel', 'B': 'Montesquieu', 'C': 'Thomas Hobbes', 'D': 'Rousseau'},
+          'correta': "A" },
+          
+         {'titulo': 'Qual foi o recurso utilizado inicialmente pelo homem para explicar a origem das coisas?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Filosofia', 'B': 'Matemática', 'C': 'Mitologia', 'D': 'Astrologia'},
+          'correta': "C" },
+          
+         {'titulo': 'Que líder mundial ficou conhecida como “Dama de Ferro”?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Dilma Roussef', 'B': 'Margaret Thatcher', 'C': 'Hillary Clinton', 'D': 'Angela Merkel'},
+          'correta': "B" },
+
+         {'titulo': 'Que substância é absorvida pelas plantas e expirada por todos os seres vivos?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Oxigênio', 'B': 'Nitrogênio', 'C': 'Dióxido de Carbono', 'D': 'Hélio'},
+          'correta': "C" },
+         ]
