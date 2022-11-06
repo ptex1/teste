@@ -98,11 +98,6 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'opcoes': {'A': 'Ligue 101', 'B': 'Ligue 192', 'C': 'Ligue 109', 'D': 'Ligue 122'},
           'correta': 'B'},
 
-         {'titulo': 'Qual a segunda pessoa mais seguida no Instagram?',
-          'nivel': 'medio',
-          'opcoes': {'A': 'Cristiano Ronaldo', 'B': 'Dwayne Johnson', 'C': 'Kim Kardashian', 'D': 'Kylie Jenner'},
-          'correta': 'D'},
-
          {'titulo': 'Qual a pessoa mais seguida no Instagram?',
           'nivel': 'medio',
           'opcoes': {'A': 'Cristiano Ronaldo', 'B': 'Dwayne Johnson', 'C': 'Kim Kardashian', 'D': 'Lionel Messi'},
@@ -221,5 +216,5 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          {'titulo': 'Que substância é absorvida pelas plantas e expirada por todos os seres vivos?',
           'nivel': 'facil',
           'opcoes': {'A': 'Oxigênio', 'B': 'Nitrogênio', 'C': 'Dióxido de Carbono', 'D': 'Hélio'},
-          'correta': "C" },
+          'correta': "C" }
          ]
