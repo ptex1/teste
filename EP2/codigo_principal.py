@@ -55,25 +55,29 @@ while premio < 1000000 and continuar:
         nivel = "dificil"
     questao = sorteia_questao_inedida(base_transformada,nivel,lista_questoes_sorteadas)
     print(questao_para_texto(questao,num_questao))
-    resposta = pergunta_ao_usuario()
+    resposta = pergunta_ao_usuario() #GG
+
+    #funcao que recebe resposta ---> letra certa --> aumentar premio/num_questao e ir para proxima questao, 
+    # letra errada ---> printa mensagem de final de jogo, pular ---> verifica se pode pular, se sim, pula; se nao, mensagem de resposta invalida,
+    # ajuda
     
-    if resposta == "ajuda":
-        if pode_ajuda:
-            if num_ajudas > 0:
-                num_ajudas -= 1
-                pode_ajuda = False
-                print(f"Ok, lá vem ajuda! Você ainda tem {num_ajudas} ajudas!")
-                input("Aperte ENTER para continuar...")
-                gera_ajuda(questao)
-                print(questao_para_texto(questao,num_questao))
-            else:
-                print("Você não possui mais ajudas")
-                resposta = pergunta_ao_usuario()
-        else:
-            print("Você já pediu ajuda nesta pergunta, escolha outra opção")
-    if resposta == "pular":
-        print()
-    num_questao += 1
+#    if resposta == "ajuda":
+#        if pode_ajuda:
+#            if num_ajudas > 0:
+#                num_ajudas -= 1
+#                pode_ajuda = False
+#                print(f"Ok, lá vem ajuda! Você ainda tem {num_ajudas} ajudas!")
+#                input("Aperte ENTER para continuar...")
+#                print(gera_ajuda(questao))
+#                print(questao_para_texto(questao,num_questao))
+#            else:
+#                print("Você não possui mais ajudas")
+#                resposta = pergunta_ao_usuario()
+#        else:
+#            print("Você já pediu ajuda nesta pergunta, escolha outra opção")
+#    if resposta == "pular":
+#        print()
+#    num_questao += 1
 
 
 
