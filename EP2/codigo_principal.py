@@ -1,5 +1,6 @@
 from base_de_perguntas import *
 from funcoes_obrigatorias import *
+from funcoes_extras import acao_a_tomar
 
 
 def pergunta_ao_usuario():
@@ -44,6 +45,7 @@ num_questao = 1
 lista_questoes_sorteadas = []
 num_ajudas = 2
 num_pulos = 3
+num_acertos = 0
 
 while premio < 1000000 and continuar:
     pode_ajuda = True
@@ -56,7 +58,8 @@ while premio < 1000000 and continuar:
     questao = sorteia_questao_inedida(base_transformada,nivel,lista_questoes_sorteadas)
     print(questao_para_texto(questao,num_questao))
     resposta = pergunta_ao_usuario() #GG
-
+    acao = acao_a_tomar(resposta)
+    print(acao_a_tomar(resposta))
     #funcao que recebe resposta ---> letra certa --> aumentar premio/num_questao e ir para proxima questao, 
     # letra errada ---> printa mensagem de final de jogo, pular ---> verifica se pode pular, se sim, pula; se nao, mensagem de resposta invalida,
     # ajuda
@@ -78,6 +81,9 @@ while premio < 1000000 and continuar:
 #    if resposta == "pular":
 #        print()
 #    num_questao += 1
+
+
+
 
 
 
