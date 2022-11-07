@@ -1,5 +1,6 @@
 from base_de_perguntas import *
 from funcoes_obrigatorias import *
+from funcoes_extras import acao_a_tomar
 
 base_transformada = transforma_base(quest)
 pos_premio = 0
