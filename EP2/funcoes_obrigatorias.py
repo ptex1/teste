@@ -1,4 +1,6 @@
 import random
+import colorama
+from colorama import *
 
 def transforma_base(lista_questoes):
     nova_base = {}
@@ -79,7 +81,7 @@ def sorteia_questao_inedida(dic_questoes,nivel,lista_sorteadas):
 
 def questao_para_texto(dic_questao,num_questao):
     traco = "-" * 40
-    string = f"{traco}\nQUESTAO {num_questao}\n\n{dic_questao['titulo']}\n\nRESPOSTAS:\n"
+    string = f"{traco}\n" + Fore.BLUE + Style.BRIGHT + f"QUESTAO {num_questao}\n\n" + Style.RESET_ALL + f"{dic_questao['titulo']}\n\nRESPOSTAS:\n"
     alternativas = ""
     for alternativa, resposta in dic_questao["opcoes"].items():
         alternativas += f"{alternativa}: "

@@ -1,6 +1,7 @@
+import colorama
 from base_de_perguntas import *
 from funcoes_obrigatorias import *
-from funcoes_extras import acao_a_tomar
+from colorama import *
 
 base_transformada = transforma_base(quest)
 pos_premio = 0
@@ -17,7 +18,7 @@ def pergunta_ao_usuario():
     if resposta in ["A", "B", "C", "D", "ajuda", "pular","parar"]:
         return resposta
     else:
-        print("Resposta inválida")
+        print(Fore.RED + Style.BRIGHT + "Resposta inválida" + Style.RESET_ALL)
         pergunta_ao_usuario()
 
 #checagem da base de perguntas
@@ -30,15 +31,15 @@ for i in range(len(validacao)):
         jogo_defeito = True
 
 if jogo_defeito:
-    print("Base de perguntas com erro, o jogo será encerrado")
+    print(Fore.RED + Style.BRIGHT + "Base de perguntas com erro, o jogo será encerrado" + Style.RESET_ALL)
     exit()
 
 #introducao
 
-print("\nOlá! Você está na Fortuna DesSoft e terá a oportunidade de enriquecer!\n\n")
+print(Fore.MAGENTA + Style.BRIGHT + "\nOlá! Você está na Fortuna DesSoft e terá a oportunidade de enriquecer!\n\n" + Style.RESET_ALL)
 nome = input("Qual seu nome? ")
 print(f"Ok {nome}, você tem direito a pular 3 vezes e 2 ajudas!\n")
-print("As opcões de resposta são 'A','B','C','D','ajuda','pula' e 'parar'!\n\n")
+print(Fore.CYAN + Style.BRIGHT + "As opcões de resposta são 'A','B','C','D','ajuda','pula' e 'parar'!\n\n" + Style.RESET_ALL)
 input("Aperte ENTER para continuar...")
 print("\nO jogo já vai começar! Lá vem a primeira questão!\n\n")
 print("Vamos começar com questões de nível FACIL!")
@@ -60,11 +61,11 @@ def acao(resposta,questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio
                 pode_ajuda = False
                 acao(resposta,questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio,premios)
             else:
-                print("Você não possui mais ajudas, escolha outra alternativa")
+                print(Fore.RED + Style.BRIGHT + "Você não possui mais ajudas, escolha outra alternativa" + Style.RESET_ALL)
                 resposta = pergunta_ao_usuario()
                 acao(resposta, questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio,premios)
         else:
-            print("Você já utilizou 'ajuda' nesta pergunta, escolha outra alternativa")
+            print(Fore.RED + Style.BRIGHT + "Você já utilizou 'ajuda' nesta pergunta, escolha outra alternativa" + Style.RESET_ALL)
             resposta = pergunta_ao_usuario()
             acao(resposta, questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio,premios)
     elif resposta == "pular":
@@ -84,10 +85,10 @@ def acao(resposta,questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio
             acao(resposta, questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio,premios)
     elif resposta == questao["correta"]:
         if pos_premio == 8:
-            print("PARABENS, você zerou o jogo e ganhou um milhão de reais")
+            print(Fore.GREEN + Style.BRIGHT + "PARABENS, você zerou o jogo e ganhou um milhão de reais" + Style.RESET_ALL)
             exit()
         else:
-            print(f"Você acertou! Seu prêmio atual é de R${premios[pos_premio]}.00")
+            print(Fore.GREEN + Style.BRIGHT + f"Você acertou! Seu prêmio atual é de R${premios[pos_premio]}.00" + Style.RESET_ALL)
             pos_premio += 1
     elif resposta == "parar":
         quer_parar = input(f"Deseja mesmo parar [S/N]?? Caso responda 'S', sairá com R${premios[pos_premio]}.00 ")
@@ -108,6 +109,10 @@ while pos_premio < 9:
         nivel = "medio"
     else:
         nivel = "dificil"
+    if pos_premio == 4:
+        print("HEY! Você passou para o nível MEDIO")
+    elif pos_premio == 7:
+        print("HEY! Você passou para o nível DIFICIL")
     questao = sorteia_questao_inedida(base_transformada,nivel,lista_questoes_sorteadas)
     print(questao_para_texto(questao,num_questao))
     resposta = pergunta_ao_usuario()
