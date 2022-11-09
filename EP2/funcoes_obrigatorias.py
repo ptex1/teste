@@ -115,10 +115,10 @@ def gera_ajuda(dic_questao):
 
     if num_dicas == 1:
         dica = dic_questao["opcoes"][letra_sorteada1]
-        dicas = f"DICA:\nOpcões certamente erradas: {dica}"
+        dicas = Fore.GREEN + Style.BRIGHT + f"DICA:\nOpcões certamente erradas: {dica}"+ Style.RESET_ALL
     
     if num_dicas == 2:
         dica1 = dic_questao["opcoes"][letra_sorteada1]
         dica2 = dic_questao["opcoes"][letra_sorteada2]
-        dicas = f"DICA:\nOpcões certamente erradas: {dica1} | {dica2}"
+        dicas = Fore.GREEN + Style.BRIGHT + f"DICA:\nOpcões certamente erradas: {dica1} | {dica2}"+ Style.RESET_ALL
     return dicas

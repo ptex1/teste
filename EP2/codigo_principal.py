@@ -4,7 +4,7 @@ from funcoes_obrigatorias import *
 from colorama import *
 
 import random
-random.seed(4)
+random.seed(1)
 
 base_transformada = transforma_base(quest)
 pos_premio = 0
@@ -106,14 +106,13 @@ def acao(resposta,questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio
 
 
 while pos_premio < 9:
-    print(lista_questoes_sorteadas)
     pode_ajuda = True
     if num_questao < 4:
         nivel = "facil"
-    # elif num_questao < 7:
-    #     nivel = "medio"
-    # else:
-    #     nivel = "dificil"
+    elif num_questao < 7:
+        nivel = "medio"
+    else:
+        nivel = "dificil"
     if pos_premio == 4:
         print("HEY! Você passou para o nível MEDIO")
     elif pos_premio == 7:
