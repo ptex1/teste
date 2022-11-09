@@ -3,8 +3,8 @@ from base_de_perguntas import *
 from funcoes_obrigatorias import *
 from colorama import *
 
-import random
-random.seed(2)
+
+
 
 base_transformada = transforma_base(quest)
 pos_premio = 0
