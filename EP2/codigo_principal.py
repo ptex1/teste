@@ -4,7 +4,7 @@ from funcoes_obrigatorias import *
 from colorama import *
 
 import random
-random.seed(1)
+random.seed(2)
 
 base_transformada = transforma_base(quest)
 pos_premio = 0
@@ -100,7 +100,7 @@ def acao(resposta,questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio
             print(f"\nOK! Você parou e seu prêmio é de R$ {premios[pos_premio]}.00")
             exit()
     else:
-        print(f"Que pena! Você errou e vai sair sem nada :(")
+        print(Fore.RED + Style.BRIGHT +f"Que pena! Você errou e vai sair sem nada :("+ Style.RESET_ALL)
         exit()
     return pode_ajuda, num_ajudas, num_pulos, num_questao, pos_premio
 
