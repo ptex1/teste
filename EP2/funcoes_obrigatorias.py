@@ -70,12 +70,12 @@ def sorteia_questao(dic_questoes,nivel):
     return questao
 
 
-def sorteia_questao_inedida(dic_questoes,nivel,lista_sorteadas):
-    questao_sorteada = ""
-    while questao_sorteada not in lista_sorteadas:
+def sorteia_questao_inedita(dic_questoes,nivel,lista_sorteadas):
+    questao_sorteada = sorteia_questao(dic_questoes,nivel)
+    while questao_sorteada in lista_sorteadas:
         questao_sorteada = sorteia_questao(dic_questoes,nivel)
-        if questao_sorteada not in lista_sorteadas:
-            lista_sorteadas.append(questao_sorteada)
+    if questao_sorteada not in lista_sorteadas:
+        lista_sorteadas.append(questao_sorteada)
     return questao_sorteada
 
 

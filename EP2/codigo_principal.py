@@ -3,6 +3,9 @@ from base_de_perguntas import *
 from funcoes_obrigatorias import *
 from colorama import *
 
+import random
+random.seed(4)
+
 base_transformada = transforma_base(quest)
 pos_premio = 0
 premios = [1000, 5000, 10000, 30000, 50000, 100000, 300000, 500000, 1000000]
@@ -15,7 +18,7 @@ pode_ajuda = True
 
 def pergunta_ao_usuario():
     resposta = input("Qual sua resposta?! ")
-    if resposta in ["A", "B", "C", "D", "ajuda", "pular","parar"]:
+    if resposta in ["A", "B", "C", "D", "ajuda", "pula","parar"]:
         return resposta
     else:
         print(Fore.RED + Style.BRIGHT + "Resposta inválida" + Style.RESET_ALL)
@@ -68,13 +71,14 @@ def acao(resposta,questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio
             print(Fore.RED + Style.BRIGHT + "Você já utilizou 'ajuda' nesta pergunta, escolha outra alternativa" + Style.RESET_ALL)
             resposta = pergunta_ao_usuario()
             acao(resposta, questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio,premios)
-    elif resposta == "pular":
+    elif resposta == "pula":
         if num_pulos > 0:
             num_pulos -= 1
             num_questao += 1
             print(f"Ok, pulando! Você ainda tem {num_pulos}")
             input("Aperte ENTER para continuar...")
-            questao = sorteia_questao_inedida(base_transformada,nivel,lista_questoes_sorteadas)
+
+            questao = sorteia_questao_inedita(base_transformada,nivel,lista_questoes_sorteadas)
             print(questao_para_texto(questao,num_questao))
             resposta = pergunta_ao_usuario()
             return acao(resposta, questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio,premios)
@@ -102,18 +106,19 @@ def acao(resposta,questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio
 
 
 while pos_premio < 9:
+    print(lista_questoes_sorteadas)
     pode_ajuda = True
     if num_questao < 4:
         nivel = "facil"
-    elif num_questao < 7:
-        nivel = "medio"
-    else:
-        nivel = "dificil"
+    # elif num_questao < 7:
+    #     nivel = "medio"
+    # else:
+    #     nivel = "dificil"
     if pos_premio == 4:
         print("HEY! Você passou para o nível MEDIO")
     elif pos_premio == 7:
         print("HEY! Você passou para o nível DIFICIL")
-    questao = sorteia_questao_inedida(base_transformada,nivel,lista_questoes_sorteadas)
+    questao = sorteia_questao_inedita(base_transformada,nivel,lista_questoes_sorteadas)
     print(questao_para_texto(questao,num_questao))
     resposta = pergunta_ao_usuario()
     pode_ajuda, num_ajudas, num_pulos,num_questao, pos_premio  = acao(resposta,questao,num_questao,pode_ajuda,num_ajudas,num_pulos,pos_premio,premios)
