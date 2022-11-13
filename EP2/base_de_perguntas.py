@@ -213,8 +213,48 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'opcoes': {'A': 'Dilma Roussef', 'B': 'Margaret Thatcher', 'C': 'Hillary Clinton', 'D': 'Angela Merkel'},
           'correta': "B" },
 
-         {'titulo': 'Que substância é absorvida pelas plantas e expirada por todos os seres vivos?',
+         {'titulo': 'Quem pintou o teto da capela sistina?',
           'nivel': 'facil',
-          'opcoes': {'A': 'Oxigênio', 'B': 'Nitrogênio', 'C': 'Dióxido de Carbono', 'D': 'Hélio'},
-          'correta': "C" }
+          'opcoes': {'A': 'Michelangelo', 'B': 'Leonardo da Vinci', 'C': 'Rafael', 'D': 'Sandro Botticelli'},
+          'correta': "A" },
+           
+         {'titulo': 'Quantos graus são necessários para que dois ângulos sejam complementares?',
+          'nivel': 'medio',
+          'opcoes': {'A': '45', 'B': '60', 'C': '90', 'D': '180'},
+          'correta': "C" },
+          
+         {'titulo': 'Quem foi o criador da tragédia grega?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Homero', 'B': 'Eurípedes', 'C': 'Plutarco', 'D': 'Ésquilo'},
+          'correta': "D" },
+          
+         {'titulo': 'Em que ano e quem foi eleito o primeiro presidente do Brasil?',
+          'nivel': 'dificil',
+          'opcoes': {'A': '1891, Deodoro da Fonseca', 'B': '1890, Floriano Peixoto', 'C': '1889, Hermes da Fonseca', 'D': '1930, Getúlio Vargas'},
+          'correta': "A" },
+          
+         {'titulo': 'As obras Abaporu, Operários e Antropofagia foram pintadas por qual artista brasileiro?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Anita Malfatti', 'B': 'Candido Potinari', 'C': 'Tarsila do Amaral', 'D': 'Romero Britto'},
+          'correta': "C" },
+          
+         {'titulo': 'Em que país nasceu Clarice Lispector?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Ucrânia', 'B': 'Brasil', 'C': 'Portugal', 'D': 'Fraça'},
+          'correta': "A" },
+          
+         {'titulo': 'O que é filantropo?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Pessoa que tem excesso de confiança', 'B': 'Pessoa que pratica a caridade', 'C': 'Pessoa egoísta', 'D': 'Poema de quatro versos'},
+          'correta': "B" },
+           
+         {'titulo': 'Quais dos órgãos abaixo pertencem ao sistema respiratório?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Laringe e traqueia', 'B': 'Pulmões e faringe', 'C': 'Esôfago e brônquios', 'D': 'Tireoide e hipófise'},
+          'correta': "A" },
+           
+         {'titulo': 'Quais dos órgãos abaixo pertencem ao sistema respiratório?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Buenos Aires', 'B': 'Rio de Janeiro', 'C': 'Assunção', 'D': 'Caracas'},
+          'correta': "B" }
          ]
