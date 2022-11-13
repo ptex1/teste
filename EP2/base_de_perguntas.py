@@ -253,7 +253,7 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'opcoes': {'A': 'Laringe e traqueia', 'B': 'Pulmões e faringe', 'C': 'Esôfago e brônquios', 'D': 'Tireoide e hipófise'},
           'correta': "A" },
            
-         {'titulo': 'Quais dos órgãos abaixo pertencem ao sistema respiratório?',
+         {'titulo': 'Em que cidade ocorreu a Eco-92, a Conferência das Nações Unidas sobre ambiente e desenvolvimento?',
           'nivel': 'dificil',
           'opcoes': {'A': 'Buenos Aires', 'B': 'Rio de Janeiro', 'C': 'Assunção', 'D': 'Caracas'},
           'correta': "B" }
